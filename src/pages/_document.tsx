@@ -18,6 +18,11 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link href="https://fonts.gstatic.com" rel="preconnect" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700"
+            rel="stylesheet"
+          />
           <link href="/favicon.ico" rel="icon" />
           <meta content="Shortify" name="description" />
         </Head>

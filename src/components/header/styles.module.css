@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav > * {
+  margin: 0 16px;
+}
+
+.navItem {
+  color: var(--color-neutral-gray);
+}
+
+.navItem:hover {
+  color: black;
+  cursor: pointer;
+}

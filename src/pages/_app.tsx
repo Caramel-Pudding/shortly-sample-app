@@ -2,7 +2,8 @@ import "@/debug/wdyr";
 import React, { FC, memo } from "react";
 import { AppProps, NextWebVitalsMetric } from "next/app";
 
-import "@/styles/globals.css";
+import "@/styles/reset.css";
+import "@/styles/common.css";
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;
