@@ -1,7 +1,7 @@
 import React, { FC, memo } from "react";
 
 interface ShortlyIconProps {
-  fill?: string;
+  readonly fill?: string;
 }
 
 export const ShortlyIcon: FC<ShortlyIconProps> = memo(

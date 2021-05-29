@@ -6,8 +6,8 @@ import { Route } from "@/types/route";
 import styles from "./styles.module.css";
 
 interface AdditionalNavigationProps {
-  head: Route;
-  list: Route[];
+  readonly head: Route;
+  readonly list: Route[];
 }
 
 export const AdditionalNavigation: FC<AdditionalNavigationProps> = memo(

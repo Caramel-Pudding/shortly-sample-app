@@ -39,6 +39,9 @@
         "@/pages/*": [
           "pages/*"
         ],
+        "@/redux/*": [
+          "redux/*"
+        ],
         "@/styles/*": [
           "styles/*"
         ],

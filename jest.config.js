@@ -24,6 +24,7 @@ module.exports = {
     '^@/consts/(.*)$': resolve(__dirname, './src/consts/$1'),
     '^@/network/(.*)$': resolve(__dirname, './src/network/$1'),
     '^@/pages/(.*)$': resolve(__dirname, './src/pages/$1'),
+    '^@/redux/(.*)$': resolve(__dirname, './src/redux/$1'),
     '^@/styles/(.*)$': resolve(__dirname, './src/styles/$1'),
     '^@/tests/(.*)$': resolve(__dirname, './src/__tests__/$1'),
     '^@/types/(.*)$': resolve(__dirname, './src/types/$1'),

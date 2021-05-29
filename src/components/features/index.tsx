@@ -18,6 +18,7 @@ export const Features: FC = memo(() => {
       <section className={styles.features}>
         {features.map((feature) => (
           <FeatureCard
+            key={feature.featureName}
             featureDescription={feature.featureDescription}
             featureName={feature.featureName}
             imageURL={feature.imageURL}

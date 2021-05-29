@@ -16,10 +16,13 @@
 
 .input {
   width: 100%;
-  color: var(--color-neutral-gray);
   border-radius: 8px;
   padding: 16px;
   font-size: 1rem;
+}
+
+.inputEmpty {
+  color: var(--color-neutral-gray);
 }
 
 .button {
@@ -28,5 +31,6 @@
   border-radius: 8px;
   padding: 8px 16px;
   margin-left: 16px;
+  cursor: pointer;
   white-space: nowrap;
 }

@@ -1,4 +1,20 @@
 import { NextRouter } from "next/router";
+import { RootState } from "@/redux/store";
+import { combineReducers } from "@reduxjs/toolkit";
+
+import {
+  reducer as urls,
+  initialState as urlsInitialState,
+} from "@/redux/features/urls/slice";
+
+export const reducer = combineReducers({
+  urls,
+});
+
+// Redux initial state mock
+export const initialStateMock: RootState = {
+  urls: urlsInitialState,
+};
 
 // NextRouter mock
 export const mockRouter: NextRouter = {
