@@ -14,9 +14,11 @@ export const FeatureCard: FC<FeatureCardProps> = memo(
   ({ featureName, featureDescription, imageURL }) => {
     return (
       <article className={styles.card}>
-        <Image height="30" src={imageURL} width="30" />
+        <aside className={styles.iconContainer}>
+          <Image height="32" src={imageURL} width="32" />
+        </aside>
         <h3>{featureName}</h3>
-        <span>{featureDescription}</span>
+        <p className={styles.description}>{featureDescription}</p>
       </article>
     );
   }

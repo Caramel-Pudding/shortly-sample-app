@@ -3,7 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 32px;
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
 
 .navBar {
@@ -12,12 +13,16 @@
 }
 
 .nav {
+  margin-left: 32px;
+}
+
+.links {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.nav > * {
+.links > * {
   margin: 0 16px;
 }
 

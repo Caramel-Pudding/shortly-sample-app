@@ -23,7 +23,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700"
             rel="stylesheet"
           />
-          <link href="/favicon.ico" rel="icon" />
+          <link href="/favicon-32x32.png" rel="icon" />
           <meta content="Shortify" name="description" />
         </Head>
         <body>

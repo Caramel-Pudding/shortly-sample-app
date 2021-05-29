@@ -1,35 +1,51 @@
 import React, { FC, memo } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import classnames from "classnames";
 
 import { routes } from "@/consts/routes";
 import { classes } from "@/consts/common-css-classes";
 
 import styles from "./styles.module.css";
+import { ShortlyIcon } from "../icons/branding/shortly";
 
 export const Header: FC = memo(() => {
   return (
-    <header className={styles.header}>
+    <header
+      className={classnames(
+        styles.header,
+        classes.offsets.layoutHorizontalOffset
+      )}
+    >
       <section className={styles.navBar}>
         <Link href="/">
-          <Image height="33" src="/images/logo.svg" width="121" />
+          <a>
+            <ShortlyIcon />
+          </a>
         </Link>
-        <ul className={styles.nav}>
-          {routes.map((route) => (
-            <li className={styles.navItem}>
-              <Link href={route.path}>{route.title}</Link>
-            </li>
-          ))}
-        </ul>
+        <nav className={styles.nav}>
+          <ul className={styles.links}>
+            {routes.map((route) => (
+              <li className={styles.navItem}>
+                <Link href={route.path}>{route.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </section>
-      <section className={styles.nav}>
+      <section className={styles.links}>
         <Link href="/">
           <button className={styles.navItem} type="button">
             Login
           </button>
         </Link>
         <Link href="/">
-          <button className={classes.elements.roundedButton} type="button">
+          <button
+            className={classnames(
+              classes.elements.roundedButton.class,
+              classes.elements.roundedButton.modifiers.normalButton
+            )}
+            type="button"
+          >
             Sign Up
           </button>
         </Link>

@@ -8,11 +8,13 @@ import styles from "./styles.module.css";
 export const Features: FC = memo(() => {
   return (
     <article className={styles.container}>
-      <h2>Advanced Statistics</h2>
-      <span>
-        Track how your links are performing across the web with our advanced
-        statistics dashboard.
-      </span>
+      <section className={styles.info}>
+        <h2 className={styles.title}>Advanced Statistics</h2>
+        <span className={styles.subTitle}>
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </span>
+      </section>
       <section className={styles.features}>
         {features.map((feature) => (
           <FeatureCard
@@ -21,6 +23,7 @@ export const Features: FC = memo(() => {
             imageURL={feature.imageURL}
           />
         ))}
+        <hr className={styles.line} />
       </section>
     </article>
   );

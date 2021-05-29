@@ -1,5 +1,5 @@
 import React, { FC, memo } from "react";
-import Image from "next/image";
+import classnames from "classnames";
 
 import { classes } from "@/consts/common-css-classes";
 
@@ -12,13 +12,26 @@ export const Intro: FC = memo(() => {
         <h1 className={styles.title}>More than just shorter links</h1>
         <span className={styles.subTitle}>
           Build your brand&apos;s recognition and get detailed insights on how
-          your links are performing
+          your links are performing.
         </span>
-        <button className={classes.elements.roundedButton} type="button">
+        <button
+          className={classnames(
+            classes.elements.roundedButton.class,
+            classes.elements.roundedButton.modifiers.largeButton
+          )}
+          type="button"
+        >
           Get Started
         </button>
       </section>
-      <Image height="482" src="/images/illustration-working.svg" width="773" />
+      <section className={styles.imageContainer}>
+        <img
+          alt="Illustration Working"
+          height="482"
+          src="/images/illustration-working.svg"
+          width="773"
+        />
+      </section>
     </article>
   );
 });

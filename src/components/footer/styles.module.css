@@ -1,12 +1,37 @@
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  padding-top: 64px;
+  padding-bottom: 64px;
   background-color: var(--color-neutral-very-dark-violet);
   color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 240px;
+}
+
+.socials > * {
+  margin: 0 8px;
 }
 
 .navigation {
   display: flex;
   flex-direction: row;
+}
+
+.navigation > * {
+  margin: 0 40px;
+}
+
+.iconContainer {
+  height: fit-content;
+}
+
+.iconContainer path:hover {
+  fill: var(--color-primary-cyan);
 }

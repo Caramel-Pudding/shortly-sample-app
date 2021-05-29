@@ -2,6 +2,7 @@
   --color-primary-cyan: hsl(180, 66%, 49%);
   --color-primary-dark-violet: hsl(257, 27%, 26%);
   --color-secondary-red: hsl(0, 87%, 67%);
+  --color-secondary-light-gray: #eff1f7;
   --color-neutral-gray: hsl(0, 0%, 75%);
   --color-neutral-grayish-violet: hsl(257, 7%, 63%);
   --color-neutral-very-dark-blue: hsl(255, 11%, 22%);
@@ -12,5 +13,18 @@
   color: white;
   background-color: var(--color-primary-cyan);
   border-radius: 40px;
+  cursor: pointer;
+}
+
+.normalButton {
   padding: 8px 16px;
+}
+
+.largeButton {
+  font-size: 1.25rem;
+  padding: 8px 32px;
+}
+
+.layoutHorizontalOffset {
+  padding: 0 10vw;
 }

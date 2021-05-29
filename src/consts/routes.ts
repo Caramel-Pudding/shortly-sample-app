@@ -1,4 +1,6 @@
-export const routes = [
+import { Route } from "@/types/route";
+
+export const routes: Route[] = [
   {
     path: "/",
     title: "Features",

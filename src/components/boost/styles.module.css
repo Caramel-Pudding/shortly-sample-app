@@ -2,6 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(/images/bg-boost-desktop.svg);
+  padding: 48px 0;
+  background-image: url(/images/bg/bg-boost-desktop.svg);
+  background-color: var(--color-primary-dark-violet);
   color: white;
+}
+
+.title {
+  font-size: 2.25rem;
+  margin-bottom: 8px;
 }

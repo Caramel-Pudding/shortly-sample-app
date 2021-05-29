@@ -1,17 +1,25 @@
+.wrapper {
+  position: relative;
+}
+
 .container {
+  position: absolute;
+  top: -60px;
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding: 36px;
+  padding: 56px;
   border-radius: 8px;
-  background-image: url(/images/bg-shorten-desktop.svg);
+  background-image: url(/images/bg/bg-shorten-desktop.svg);
+  background-color: var(--color-primary-dark-violet);
 }
 
 .input {
   width: 100%;
   color: var(--color-neutral-gray);
   border-radius: 8px;
-  padding: 8px 16px;
+  padding: 16px;
+  font-size: 1rem;
 }
 
 .button {

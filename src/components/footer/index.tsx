@@ -1,54 +1,81 @@
 import React, { FC, memo } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import classnames from "classnames";
+
+import { classes } from "@/consts/common-css-classes";
+import { AdditionalNavigation } from "../additional-navigation";
+import { FacebookIcon } from "../icons/socials/facebook";
+import { TwitterIcon } from "../icons/socials/twitter";
+import { PinterestIcon } from "../icons/socials/pinterest";
+import { InstagramIcon } from "../icons/socials/instagram";
+import { ShortlyIcon } from "../icons/branding/shortly";
 
 import styles from "./styles.module.css";
 
 export const Footer: FC = memo(() => {
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={classnames(
+        styles.footer,
+        classes.offsets.layoutHorizontalOffset
+      )}
+    >
       <Link href="/">
-        <Image height="33" src="/images/logo.svg" width="121" />
+        <a className={styles.iconContainer}>
+          <ShortlyIcon fill="white" />
+        </a>
       </Link>
-      <section className={styles.navigation}>
-        <section>
-          <span>Features</span>
-          <ul>
-            <li>Link Shortening</li>
-            <li>Banded Links</li>
-            <li>Analytics</li>
-          </ul>
+      <section className={styles.content}>
+        <section className={styles.navigation}>
+          <AdditionalNavigation
+            head={{ path: "/", title: "Features" }}
+            list={[
+              { path: "/", title: "Link Shortening" },
+              { path: "/", title: "Banded Links" },
+              { path: "/", title: "Analytics" },
+            ]}
+          />
+          <AdditionalNavigation
+            head={{ path: "/", title: "Resources" }}
+            list={[
+              { path: "/", title: "Blog" },
+              { path: "/", title: "Developers" },
+              { path: "/", title: "Support" },
+            ]}
+          />
+          <AdditionalNavigation
+            head={{ path: "/", title: "Company" }}
+            list={[
+              { path: "/", title: "About" },
+              { path: "/", title: "Our Team" },
+              { path: "/", title: "Careers" },
+              { path: "/", title: "Contact" },
+            ]}
+          />
         </section>
-        <section>
-          <span>Resources</span>
-          <ul>
-            <li>Blog</li>
-            <li>Developers</li>
-            <li>Support</li>
-          </ul>
-        </section>
-        <section>
-          <span>Company</span>
-          <ul>
-            <li>About</li>
-            <li>Our Team</li>
-            <li>Careers</li>
-            <li>Contact</li>
-          </ul>
+        <section className={styles.socials}>
+          <Link href="/">
+            <a className={styles.iconContainer}>
+              <FacebookIcon />
+            </a>
+          </Link>
+          <Link href="/">
+            <a className={styles.iconContainer}>
+              <TwitterIcon />
+            </a>
+          </Link>
+          <Link href="/">
+            <a className={styles.iconContainer}>
+              <PinterestIcon />
+            </a>
+          </Link>
+          <Link href="/">
+            <a className={styles.iconContainer}>
+              <InstagramIcon />
+            </a>
+          </Link>
         </section>
       </section>
-      <Link href="/">
-        <Image height="50" src="/images/icon-facebook.svg" width="50" />
-      </Link>
-      <Link href="/">
-        <Image height="50" src="/images/icon-twitter.svg" width="50" />
-      </Link>
-      <Link href="/">
-        <Image height="50" src="/images/icon-pinterest.svg" width="50" />
-      </Link>
-      <Link href="/">
-        <Image height="50" src="/images/icon-instagram.svg" width="50" />
-      </Link>
     </footer>
   );
 });

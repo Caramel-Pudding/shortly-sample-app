@@ -2,10 +2,12 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-
-  /* background: linear-gradient(180deg, white 50%, var(--color-neutral-gray) 50%); */
 }
 
-.main {
-  padding: 0 10vw;
+.upperHalf {
+  padding-left: 10vw;
+}
+
+.lowerHalf {
+  background-color: var(--color-secondary-light-gray);
 }

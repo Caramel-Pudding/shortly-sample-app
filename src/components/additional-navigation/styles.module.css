@@ -1,0 +1,12 @@
+.list {
+  margin-top: 16px;
+}
+
+.listItem {
+  margin: 8px 0;
+  color: var(--color-neutral-gray);
+}
+
+.listItem:hover {
+  color: var(--color-primary-cyan);
+}

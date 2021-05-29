@@ -1,4 +1,26 @@
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
+  background-color: white;
+  height: fit-content;
+  border-radius: 8px;
+  padding: 88px 24px 24px 24px;
+  z-index: 1;
+}
+
+.description {
+  color: var(--color-neutral-gray);
+}
+
+.iconContainer {
+  position: absolute;
+  top: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-neutral-very-dark-violet);
+  width: fit-content;
+  padding: 24px;
+  border-radius: 50%;
 }
