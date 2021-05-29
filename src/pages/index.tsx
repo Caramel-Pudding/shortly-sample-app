@@ -8,6 +8,7 @@ import { Boost } from "@/components/boost";
 import { Footer } from "@/components/footer";
 import { classes } from "@/consts/common-css-classes";
 
+import { SavedUrls } from "@/components/saved-urls";
 import styles from "./styles.module.css";
 
 const Home: FC = () => {
@@ -23,6 +24,7 @@ const Home: FC = () => {
         </section>
         <section className={styles.lowerHalf}>
           <section className={classes.offsets.layoutHorizontalOffset}>
+            <SavedUrls />
             <Features />
           </section>
         </section>

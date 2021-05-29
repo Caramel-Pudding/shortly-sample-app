@@ -1,9 +1,15 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { URLsState, IsLoadingChangePayload, URLsChangePayload } from "./types";
+import {
+  URLsState,
+  IsLoadingChangePayload,
+  URLsChangePayload,
+  CopiedURLChangePayload,
+} from "./types";
 
 // Define the initial state using that type
 export const initialState: URLsState = {
   urls: [],
+  copiedUrl: "",
   isLoading: false,
 };
 
@@ -13,8 +19,11 @@ export const descriptorsSlice = createSlice({
   initialState,
   /* eslint-disable no-param-reassign */
   reducers: {
-    setURLs: (state, action: PayloadAction<URLsChangePayload>) => {
+    addURL: (state, action: PayloadAction<URLsChangePayload>) => {
       state.urls = [...state.urls, action.payload.value];
+    },
+    setCopiedUrl: (state, action: PayloadAction<CopiedURLChangePayload>) => {
+      state.copiedUrl = action.payload.value;
     },
     setIsLoading: (state, action: PayloadAction<IsLoadingChangePayload>) => {
       state.isLoading = action.payload.value;
@@ -23,6 +32,6 @@ export const descriptorsSlice = createSlice({
   /* eslint-enable no-param-reassign */
 });
 
-export const { setURLs, setIsLoading } = descriptorsSlice.actions;
+export const { addURL, setIsLoading, setCopiedUrl } = descriptorsSlice.actions;
 
 export const { reducer } = descriptorsSlice;

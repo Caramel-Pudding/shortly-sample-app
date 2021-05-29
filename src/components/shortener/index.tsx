@@ -1,11 +1,14 @@
 import React, { FC, memo, useState, FormEvent, SyntheticEvent } from "react";
 import classnames from "classnames";
-
+import { useAppDispatch } from "@/hooks/redux";
+import { setIsLoading, addURL } from "@/redux/features/urls/slice";
 import { fetchShortenUrl } from "@/network/shortcode/gateway";
 
 import styles from "./styles.module.css";
 
 export const Shortener: FC = memo(() => {
+  const dispatch = useAppDispatch();
+
   const [link, setLink] = useState("");
 
   const inputHandler = (event: FormEvent<HTMLInputElement>) => {
@@ -14,7 +17,13 @@ export const Shortener: FC = memo(() => {
 
   const submitHandler = async (event: SyntheticEvent) => {
     event.preventDefault();
-    await fetchShortenUrl({ link }).then((result) => console.log(result));
+    dispatch(setIsLoading({ value: true }));
+    await fetchShortenUrl({ link }).then((result) => {
+      if (result && result.ok) {
+        dispatch(addURL({ value: result.result }));
+      }
+    });
+    dispatch(setIsLoading({ value: false }));
   };
 
   return (

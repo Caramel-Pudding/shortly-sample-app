@@ -1,10 +1,15 @@
 export interface URLsState {
   readonly urls: ShortUrl[];
+  readonly copiedUrl: string;
   readonly isLoading: boolean;
 }
 
 export interface URLsChangePayload {
   readonly value: ShortUrl;
+}
+
+export interface CopiedURLChangePayload {
+  readonly value: string;
 }
 
 export interface IsLoadingChangePayload {

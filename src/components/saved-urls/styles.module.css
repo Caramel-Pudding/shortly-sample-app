@@ -1,0 +1,9 @@
+.container {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container > article {
+  margin: 8px 0;
+}
