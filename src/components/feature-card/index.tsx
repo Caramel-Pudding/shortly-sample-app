@@ -14,7 +14,7 @@ export const FeatureCard: FC<FeatureCardProps> = memo(
     return (
       <article className={styles.card}>
         <aside className={styles.iconContainer}>
-          <Image height="32" src={imageURL} width="32" />
+          <Image alt={featureName} height="32" src={imageURL} width="32" />
         </aside>
         <h3>{featureName}</h3>
         <p className={styles.description}>{featureDescription}</p>

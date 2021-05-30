@@ -6,6 +6,7 @@
 
 .upperHalf {
   padding-left: 10vw;
+  overflow: hidden;
 }
 
 .lowerHalf {

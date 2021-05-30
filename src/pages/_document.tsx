@@ -18,6 +18,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <title>Sortify your links today!</title>
           <link href="https://fonts.gstatic.com" rel="preconnect" />
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700"
