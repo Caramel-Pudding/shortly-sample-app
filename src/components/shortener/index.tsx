@@ -1,6 +1,8 @@
 import React, { FC, memo, useState, FormEvent, SyntheticEvent } from "react";
+
 import classnames from "classnames";
-import { useAppDispatch } from "@/hooks/redux";
+
+import { useAppDispatch, useAppSelector } from "@/hooks/redux";
 import { setIsLoading, addURL } from "@/redux/features/urls/slice";
 import { fetchShortenUrl } from "@/network/shortcode/gateway";
 
@@ -8,6 +10,7 @@ import styles from "./styles.module.css";
 
 export const Shortener: FC = memo(() => {
   const dispatch = useAppDispatch();
+  const { isLoading } = useAppSelector((state) => state.urls);
 
   const [link, setLink] = useState("");
 
@@ -37,7 +40,13 @@ export const Shortener: FC = memo(() => {
           value={link}
           onChange={inputHandler}
         />
-        <button className={styles.button} type="submit">
+        <button
+          className={classnames(styles.button, {
+            [styles.disabledButton]: isLoading,
+          })}
+          disabled={isLoading}
+          type="submit"
+        >
           Shorten it!
         </button>
       </form>

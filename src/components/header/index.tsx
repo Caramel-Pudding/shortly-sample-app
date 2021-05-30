@@ -25,7 +25,7 @@ export const Header: FC = memo(() => {
         <nav className={styles.nav}>
           <ul className={styles.links}>
             {routes.map((route) => (
-              <li className={styles.navItem}>
+              <li key={route.title} className={styles.navItem}>
                 <Link href={route.path}>{route.title}</Link>
               </li>
             ))}

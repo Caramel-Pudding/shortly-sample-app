@@ -4,6 +4,6 @@
   flex-direction: column;
 }
 
-.container > article {
+.container > * {
   margin: 8px 0;
 }

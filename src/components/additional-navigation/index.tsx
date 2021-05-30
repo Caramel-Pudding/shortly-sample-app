@@ -17,7 +17,7 @@ export const AdditionalNavigation: FC<AdditionalNavigationProps> = memo(
         <Link href={head.path}>{head.title}</Link>
         <ul className={styles.list}>
           {list.map((element: Route) => (
-            <li className={styles.listItem}>
+            <li key={element.title} className={styles.listItem}>
               <Link href={element.path}>{element.title}</Link>
             </li>
           ))}

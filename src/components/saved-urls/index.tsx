@@ -1,18 +1,20 @@
 import React, { FC, memo } from "react";
+import Image from "next/image";
+
 import { useAppSelector } from "@/hooks/redux";
-import { SavedUrl } from "../saved-url";
+import { SavedUrl } from "@/components/saved-url";
 
 import styles from "./styles.module.css";
 
 export const SavedUrls: FC = memo(() => {
   const { urls, isLoading } = useAppSelector((state) => state.urls);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (urls.length === 0) {
-    return null;
+  if (urls.length === 0 && isLoading) {
+    return (
+      <article className={styles.container}>
+        <Image alt="Loading..." height="76" src="/oval.svg" width="76" />
+      </article>
+    );
   }
 
   return (
@@ -20,6 +22,9 @@ export const SavedUrls: FC = memo(() => {
       {urls.map((url) => (
         <SavedUrl shortUrl={url} />
       ))}
+      {isLoading && (
+        <Image alt="Loading..." height="76" src="/oval.svg" width="76" />
+      )}
     </article>
   );
 });
