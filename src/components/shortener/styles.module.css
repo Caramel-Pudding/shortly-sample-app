@@ -21,8 +21,17 @@
   font-size: 1rem;
 }
 
-.inputEmpty {
+.input::placeholder {
   color: var(--color-neutral-gray);
+}
+
+.inputWarning {
+  border: solid 2px red;
+  outline: none;
+}
+
+.inputWarning::placeholder {
+  color: red;
 }
 
 .button {
@@ -38,4 +47,10 @@
 .disabledButton {
   color: var(--color-primary-dark-violet);
   background-color: var(--color-neutral-gray);
+}
+
+.warning {
+  color: red;
+  position: absolute;
+  top: 120px;
 }

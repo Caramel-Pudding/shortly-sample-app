@@ -13,13 +13,21 @@ export const Shortener: FC = memo(() => {
   const { isLoading } = useAppSelector((state) => state.urls);
 
   const [link, setLink] = useState("");
+  const [showWarning, setShowWarning] = useState(false);
 
   const inputHandler = (event: FormEvent<HTMLInputElement>) => {
+    if (!!event.currentTarget.value && showWarning) {
+      setShowWarning(false);
+    }
     setLink(event.currentTarget.value);
   };
 
   const submitHandler = async (event: SyntheticEvent) => {
     event.preventDefault();
+    if (!link) {
+      setShowWarning(true);
+      return;
+    }
     dispatch(setIsLoading({ value: true }));
     await fetchShortenUrl({ link }).then((result) => {
       if (result && result.ok) {
@@ -34,7 +42,7 @@ export const Shortener: FC = memo(() => {
       <form className={styles.container} onSubmit={submitHandler}>
         <input
           className={classnames(styles.input, {
-            [styles.inputEmpty]: !link,
+            [styles.inputWarning]: showWarning,
           })}
           placeholder="Shorten a link here..."
           value={link}
@@ -49,6 +57,10 @@ export const Shortener: FC = memo(() => {
         >
           Shorten it!
         </button>
+
+        {showWarning && (
+          <span className={styles.warning}>Please add a link</span>
+        )}
       </form>
     </section>
   );
