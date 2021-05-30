@@ -1,3 +1,42 @@
+### Overview
+
+You can see it running [HERE](https://shortly-sample-app.vercel.app/)!
+
+# Getting Started
+
+Here are some useful CLI commands you can use:
+
+```bash
+yarn dev
+# Run the dev server on http://localhost:3000
+yarn dev:vitals
+# Run the dev server on http://localhost:3000 with additional runtime info on Web Vitals in console
+yarn build
+# Create a production build
+yarn start
+# Run the dev server with production build on http://localhost:3000
+yarn analyze
+# Analyze size and module composition of a production build
+yarn test
+# Run tests
+yarn test:watch
+# Run tests in watch mode
+yarntest:coverage
+# Run tests with coverage info
+yarn eslint
+# Run eslint without erros fixing
+yarn eslint:fix
+# Run eslint with errors fixing
+yarn stylelint
+# Run stylelint without erros fixing
+yarn stylelint:fix
+# Run stylelint with errors fixing
+yarn simple-git-hooks:update
+# Update git hooks to the new config
+```
+
+After running dev or build & start, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
 ### Objective
 
 Using TypeScript and NextJS, your challenge is to build out a URL shortening web app, integrate with the [shrtcode API](https://app.shrtco.de/docs), and get it looking as close to the design as possible.
@@ -33,14 +72,30 @@ There is also a `style-guide.md` file containing the information you'll need, su
 -   Maintainability: is it written in a clean, maintainable way?
 -   Testing: is the system adequately tested?
 
-### Deliverables
+### Stack
 
-Make sure to include all source code in the repository.
+First of all, I should say that I have different experiences with techs mentioned here - more with ones, less with others. So there might be some novice approaches, obvious to those more seasoned with these tools.
 
-### CodeSubmit
+Nevertheless, I enjoyed the freedom of choice and tried to select the most appropriate and most interesting tools for me at the moment. 
 
-Please organize, design, test, and document your code as if it were going into production - then push your changes to the master branch. After you have pushed your code, you may submit the assignment on the assignment page.
+When I write it, I feel like these instruments combined could create an excellent toolset to create simple, scalable, performant, and maintainable modern frontends.
 
-**Have fun building!** 🚀
+## [Typescript](https://github.com/microsoft/TypeScript)
 
-The finn GmbH Team
+Switching from JS to TS some time ago was a real step forward for me. Full & strict type coverage solves so many troubles even before you run your code. No more undefined is not a function. Not even once. It also eases your reading of code by providing de-facto documentation and allows you to conduct refactoring without any doubt or fear.
+## [Next.js](https://github.com/vercel/next.js/) (& [React](https://github.com/facebook/react), of course)
+
+This is a Next.js project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). 
+
+Currently Next is my framework of choice for fast & scalable frontends. It takes all the best things React has and improves them by giving you SSR, SSG, Client routing, API routes and so much more out of the box.
+
+## [PostCSS](https://github.com/postcss/postcss) & [CSS Modules](https://github.com/css-modules/css-modules)
+
+Post CSS & CSS Modules seem to be the de-facto standard for modern frontends at the moment. Post CSS plugin system which allows you to process your CSS the way you want. You get such things as CSS Modules isolation, auto prefixing for different browsers, linting and more.
+## [ESLint](https://github.com/eslint/eslint) & [Prettier](https://github.com/prettier/prettier) & [stylelint](https://github.com/stylelint/stylelint)
+
+These tools (then again, packed with different plugins of your choice) provide you with an automated way to maintain code quality. To be honest, configuring them is the first thing I do on any project. It allows your code to stay consistent, clean, and devoid of the most usual code smells throughout the whole codebase.
+
+## [Jest](https://github.com/facebook/jest) & [React Testing Library](https://github.com/testing-library/react-testing-library)
+
+Then again, probably the de-facto standard for frontend testing. These allow you to cover any part of your application with a whole bunch of different tests, keeping in mind various test- and use-cases. All of it with a lean and obvious API.
