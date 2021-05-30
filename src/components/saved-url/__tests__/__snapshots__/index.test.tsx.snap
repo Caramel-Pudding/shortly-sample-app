@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SavedUrls Component Should detect copied url 1`] = `
+<div>
+  <article
+    class="container"
+  >
+    <span
+      class="originalLink"
+    >
+      https://userinyerface.com/
+    </span>
+    <section
+      class="interactionBlock"
+    >
+      <span
+        class="shortLink"
+      >
+        shrtco.de/JMwYm
+      </span>
+      <button
+        class="button button normalSizeButton squareButton buttonActive"
+        type="button"
+      >
+        Copied!
+      </button>
+    </section>
+  </article>
+</div>
+`;
+
+exports[`SavedUrls Component Should render with proper data 1`] = `
+<div>
+  <article
+    class="container"
+  >
+    <span
+      class="originalLink"
+    >
+      https://userinyerface.com/
+    </span>
+    <section
+      class="interactionBlock"
+    >
+      <span
+        class="shortLink"
+      >
+        shrtco.de/JMwYm
+      </span>
+      <button
+        class="button button normalSizeButton squareButton"
+        type="button"
+      >
+        Copy
+      </button>
+    </section>
+  </article>
+</div>
+`;

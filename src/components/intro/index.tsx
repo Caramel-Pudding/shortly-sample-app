@@ -34,7 +34,7 @@ export const Intro: FC = memo(() => {
           alt="Illustration Working"
           className={styles.image}
           height={isDesktop(width) ? "482" : "320"}
-          src="/images/illustration-working.svg"
+          src="/images/branding/illustration-working.svg"
           width={isDesktop(width) ? "773" : "515"}
         />
       </section>

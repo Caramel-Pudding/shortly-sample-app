@@ -73,7 +73,7 @@ export const Header: FC = memo(() => {
               <Image
                 alt="Hamburger"
                 height="32"
-                src="/hamburger.svg"
+                src="/icons/common/hamburger.svg"
                 width="32"
               />
             </button>

@@ -12,10 +12,15 @@ export const SavedUrls: FC = memo(() => {
   return (
     <article className={styles.container}>
       {urls.map((url) => (
-        <SavedUrl shortUrl={url} />
+        <SavedUrl key={url.code} shortUrl={url} />
       ))}
       {isLoading && (
-        <Image alt="Loading..." height="76" src="/spinner.svg" width="76" />
+        <Image
+          alt="Loading..."
+          height="76"
+          src="/icons/common/spinner.svg"
+          width="76"
+        />
       )}
     </article>
   );

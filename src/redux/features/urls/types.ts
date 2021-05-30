@@ -21,8 +21,10 @@ export interface ShortUrl {
   readonly short_link: string;
   readonly full_short_link: string;
   readonly short_link2: string;
+  readonly short_link3: string;
   readonly full_short_link2: string;
   readonly share_link: string;
   readonly full_share_link: string;
   readonly original_link: string;
+  readonly full_short_link3: string;
 }

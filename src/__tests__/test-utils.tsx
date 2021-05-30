@@ -5,7 +5,7 @@ import {
   RenderResult,
   Queries,
 } from "@testing-library/react";
-import { createStore, Store } from "@reduxjs/toolkit";
+import { createStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import { RootState } from "@/redux/store";
 import { RouterContext } from "next/dist/next-server/lib/router-context";
@@ -14,19 +14,16 @@ import { NextRouter } from "next/router";
 import { mockRouter, reducer, initialStateMock } from "./mocks";
 
 interface RenderProps {
-  readonly store?: Store<RootState>;
+  readonly state?: Partial<RootState>;
   readonly router?: Partial<NextRouter>;
   readonly renderOptions?: RenderOptions;
 }
 
 const render = (
   ui: ReactElement,
-  {
-    router,
-    store = createStore(reducer, initialStateMock),
-    ...renderOptions
-  }: RenderProps
+  { router, state = initialStateMock, ...renderOptions }: RenderProps
 ): RenderResult<Queries, HTMLElement> => {
+  const store = createStore(reducer, state);
   const wrapper: FC = ({ children }) => {
     return (
       <RouterContext.Provider value={{ ...mockRouter, ...router }}>

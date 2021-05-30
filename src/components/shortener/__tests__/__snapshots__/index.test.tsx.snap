@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shortener Component Should send request if form submitted with non-empty input 1`] = `
+<div>
+  <section
+    class="wrapper"
+  >
+    <form
+      class="container"
+    >
+      <input
+        class="input"
+        placeholder="Shorten a link here..."
+        value=""
+      />
+      <button
+        class="button normalSizeButton squareButton button"
+        type="submit"
+      >
+        Shorten it!
+      </button>
+    </form>
+  </section>
+</div>
+`;
+
+exports[`Shortener Component Should send request if form submitted with non-empty input 2`] = `
+<div>
+  <section
+    class="wrapper"
+  >
+    <form
+      class="container"
+    >
+      <input
+        class="input"
+        placeholder="Shorten a link here..."
+        value="https://userinyerface.com/"
+      />
+      <button
+        class="button normalSizeButton squareButton button disabledButton"
+        disabled=""
+        type="submit"
+      >
+        Shorten it!
+      </button>
+    </form>
+  </section>
+</div>
+`;
+
+exports[`Shortener Component Should show error if form submitted with empty input 1`] = `
+<div>
+  <section
+    class="wrapper"
+  >
+    <form
+      class="container"
+    >
+      <input
+        class="input"
+        placeholder="Shorten a link here..."
+        value=""
+      />
+      <button
+        class="button normalSizeButton squareButton button"
+        type="submit"
+      >
+        Shorten it!
+      </button>
+    </form>
+  </section>
+</div>
+`;
+
+exports[`Shortener Component Should show error if form submitted with empty input 2`] = `
+<div>
+  <section
+    class="wrapper"
+  >
+    <form
+      class="container"
+    >
+      <input
+        class="input inputWarning"
+        placeholder="Shorten a link here..."
+        value=""
+      />
+      <span
+        class="warning"
+      >
+        Please add a link
+      </span>
+      <button
+        class="button normalSizeButton squareButton button"
+        type="submit"
+      >
+        Shorten it!
+      </button>
+    </form>
+  </section>
+</div>
+`;
