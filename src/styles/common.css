@@ -1,6 +1,7 @@
 :root {
   --color-primary-cyan: hsl(180, 66%, 49%);
   --color-primary-dark-violet: hsl(257, 27%, 26%);
+  --color-secondary-cyan-light: #9be2e2;
   --color-secondary-red: hsl(0, 87%, 67%);
   --color-secondary-light-gray: #eff1f7;
   --color-neutral-gray: hsl(0, 0%, 75%);
@@ -9,20 +10,31 @@
   --color-neutral-very-dark-violet: hsl(260, 8%, 14%);
 }
 
-.roundedButton {
+.button {
   color: white;
   background-color: var(--color-primary-cyan);
-  border-radius: 40px;
   cursor: pointer;
 }
 
-.normalButton {
+.button:active {
+  background-color: var(--color-secondary-cyan-light);
+}
+
+.normalSizeButton {
   padding: 8px 16px;
 }
 
-.largeButton {
+.largeSizeButton {
   font-size: 1.25rem;
   padding: 8px 32px;
+}
+
+.roundedButton {
+  border-radius: 40px;
+}
+
+.squareButton {
+  border-radius: 8px;
 }
 
 .layoutHorizontalOffset {

@@ -41,8 +41,9 @@ export const Header: FC = memo(() => {
         <Link href="/">
           <button
             className={classnames(
-              classes.elements.roundedButton.class,
-              classes.elements.roundedButton.modifiers.normalButton
+              classes.elements.button.class,
+              classes.elements.button.modifiers.normalSizeButton,
+              classes.elements.button.modifiers.roundedButton
             )}
             type="button"
           >

@@ -5,6 +5,7 @@ import { useAppSelector, useAppDispatch } from "@/hooks/redux";
 import { setCopiedUrl } from "@/redux/features/urls/slice";
 import { ShortUrl } from "@/redux/features/urls/types";
 
+import { classes } from "@/consts/common-css-classes";
 import styles from "./styles.module.css";
 
 interface SavedUrlProps {
@@ -30,9 +31,15 @@ export const SavedUrl: FC<SavedUrlProps> = memo(({ shortUrl }) => {
       <section>
         <span className={styles.shortLink}>{shortUrl.short_link}</span>
         <button
-          className={classnames(styles.button, {
-            [styles.buttonActive]: isCopied,
-          })}
+          className={classnames(
+            styles.button,
+            classes.elements.button.class,
+            classes.elements.button.modifiers.normalSizeButton,
+            classes.elements.button.modifiers.squareButton,
+            {
+              [styles.buttonActive]: isCopied,
+            }
+          )}
           type="button"
           onClick={handleButtonClick}
         >

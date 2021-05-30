@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from "@/hooks/redux";
 import { setIsLoading, addURL } from "@/redux/features/urls/slice";
 import { fetchShortenUrl } from "@/network/shortcode/gateway";
 
+import { classes } from "@/consts/common-css-classes";
 import styles from "./styles.module.css";
 
 export const Shortener: FC = memo(() => {
@@ -49,15 +50,20 @@ export const Shortener: FC = memo(() => {
           onChange={inputHandler}
         />
         <button
-          className={classnames(styles.button, {
-            [styles.disabledButton]: isLoading,
-          })}
+          className={classnames(
+            classes.elements.button.class,
+            classes.elements.button.modifiers.normalSizeButton,
+            classes.elements.button.modifiers.squareButton,
+            styles.button,
+            {
+              [styles.disabledButton]: isLoading,
+            }
+          )}
           disabled={isLoading}
           type="submit"
         >
           Shorten it!
         </button>
-
         {showWarning && (
           <span className={styles.warning}>Please add a link</span>
         )}

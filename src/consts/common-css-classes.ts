@@ -1,8 +1,13 @@
 export const classes = {
   elements: {
-    roundedButton: {
-      class: "roundedButton",
-      modifiers: { normalButton: "normalButton", largeButton: "largeButton" },
+    button: {
+      class: "button",
+      modifiers: {
+        normalSizeButton: "normalSizeButton",
+        largeSizeButton: "largeSizeButton",
+        roundedButton: "roundedButton",
+        squareButton: "squareButton",
+      },
     },
   },
   offsets: {

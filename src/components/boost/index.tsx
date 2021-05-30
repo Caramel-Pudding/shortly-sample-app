@@ -11,8 +11,9 @@ export const Boost: FC = memo(() => {
       <h2 className={styles.title}>Boost your links today</h2>
       <button
         className={classnames(
-          classes.elements.roundedButton.class,
-          classes.elements.roundedButton.modifiers.largeButton
+          classes.elements.button.class,
+          classes.elements.button.modifiers.largeSizeButton,
+          classes.elements.button.modifiers.roundedButton
         )}
         type="button"
       >
