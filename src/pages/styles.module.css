@@ -11,3 +11,9 @@
 .lowerHalf {
   background-color: var(--color-secondary-light-gray);
 }
+
+@media only screen and (max-width: 800px) {
+  .upperHalf {
+    padding: 0 7.5vw;
+  }
+}

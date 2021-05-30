@@ -2,10 +2,14 @@ import React, { FC, memo } from "react";
 import classnames from "classnames";
 
 import { classes } from "@/consts/common-css-classes";
+import { useWindowDimensions } from "@/hooks/use-window-dimensions";
 
+import { isDesktop } from "@/consts/screen-breakpoints";
 import styles from "./styles.module.css";
 
 export const Intro: FC = memo(() => {
+  const { width } = useWindowDimensions();
+
   return (
     <article className={styles.container}>
       <section className={styles.content}>
@@ -28,9 +32,10 @@ export const Intro: FC = memo(() => {
       <section className={styles.imageContainer}>
         <img
           alt="Illustration Working"
-          height="482"
+          className={styles.image}
+          height={isDesktop(width) ? "482" : "320"}
           src="/images/illustration-working.svg"
-          width="773"
+          width={isDesktop(width) ? "773" : "515"}
         />
       </section>
     </article>

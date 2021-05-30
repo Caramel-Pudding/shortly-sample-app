@@ -49,6 +49,9 @@ export const Shortener: FC = memo(() => {
           value={link}
           onChange={inputHandler}
         />
+        {showWarning && (
+          <span className={styles.warning}>Please add a link</span>
+        )}
         <button
           className={classnames(
             classes.elements.button.class,
@@ -64,9 +67,6 @@ export const Shortener: FC = memo(() => {
         >
           Shorten it!
         </button>
-        {showWarning && (
-          <span className={styles.warning}>Please add a link</span>
-        )}
       </form>
     </section>
   );

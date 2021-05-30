@@ -27,8 +27,8 @@ export const SavedUrl: FC<SavedUrlProps> = memo(({ shortUrl }) => {
 
   return (
     <article className={styles.container}>
-      <span>{shortUrl.original_link}</span>
-      <section>
+      <span className={styles.originalLink}>{shortUrl.original_link}</span>
+      <section className={styles.interactionBlock}>
         <span className={styles.shortLink}>{shortUrl.short_link}</span>
         <button
           className={classnames(

@@ -12,6 +12,8 @@
   border-radius: 8px;
   background-image: url(/images/bg/bg-shorten-desktop.svg);
   background-color: var(--color-primary-dark-violet);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .input {
@@ -37,7 +39,6 @@
 .button {
   margin-left: 24px;
   cursor: pointer;
-  white-space: nowrap;
 }
 
 .disabledButton {
@@ -49,4 +50,24 @@
   color: red;
   position: absolute;
   top: 120px;
+  font-size: 0.75rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    top: -80px;
+    padding: 24px;
+    background-image: url(/images/bg/bg-shorten-mobile.svg);
+  }
+
+  .button {
+    margin-top: 24px;
+    margin-left: 0;
+  }
+
+  .warning {
+    position: relative;
+    top: 0;
+  }
 }

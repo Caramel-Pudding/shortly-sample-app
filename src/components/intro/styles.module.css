@@ -1,5 +1,4 @@
 .container {
-  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -26,6 +25,43 @@
 }
 
 .imageContainer {
+  position: relative;
+}
+
+.image {
   position: absolute;
   left: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .subTitle {
+    margin-top: 16px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .content {
+    width: 100%;
+    margin-top: 64px;
+    margin-bottom: 160px;
+    align-items: center;
+  }
+
+  .imageContainer {
+    height: 320px;
+  }
+
+  .image {
+    left: 0;
+  }
 }

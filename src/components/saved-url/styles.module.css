@@ -15,9 +15,51 @@
 .button {
   width: 100px;
   margin-left: 24px;
-  white-space: nowrap;
 }
 
 .buttonActive {
   background-color: var(--color-primary-dark-violet);
+}
+
+.line {
+  width: 100%;
+  border-color: var(--color-neutral-gray);
+}
+
+.interactionBlock {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.originalLink {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
+  .interactionBlock {
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 1px solid var(--color-neutral-gray);
+    width: 100%;
+    padding: 16px;
+  }
+
+  .originalLink {
+    padding: 16px;
+  }
 }

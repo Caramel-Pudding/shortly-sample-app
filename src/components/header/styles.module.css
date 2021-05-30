@@ -38,3 +38,10 @@
   color: black;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 800px) {
+  .header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
