@@ -1,5 +1,4 @@
 import { NextRouter } from "next/router";
-import { RootState } from "@/redux/store";
 import { combineReducers } from "@reduxjs/toolkit";
 
 import {
@@ -12,7 +11,7 @@ export const reducer = combineReducers({
 });
 
 // Redux initial state mock
-export const initialStateMock: RootState = {
+export const initialStateMock = {
   urls: urlsInitialState,
 };
 
