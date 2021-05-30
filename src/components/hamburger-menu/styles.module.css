@@ -1,0 +1,37 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+  padding: 32px;
+  background-color: var(--color-primary-dark-violet);
+  color: white;
+}
+
+.linksList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuItem {
+  margin: 8px 0;
+}
+
+.line {
+  width: 100%;
+  border-color: var(--color-neutral-gray);
+}
+
+.button {
+  width: 100%;
+}

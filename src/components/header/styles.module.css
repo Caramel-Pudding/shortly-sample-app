@@ -1,15 +1,19 @@
 .header {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 56px;
-  padding-bottom: 56px;
 }
 
 .navBar {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .nav {
