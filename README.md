@@ -2,7 +2,7 @@
 
 You can see it running [HERE](https://shortly-sample-app.vercel.app/)!
 
-# Getting Started
+### Getting Started
 
 Here are some useful CLI commands you can use:
 
